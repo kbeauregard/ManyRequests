@@ -1,8 +1,5 @@
 import setuptools
 
-with open("ReadMe.md", "r") as fh:
-    long_description = fh.read()
-
 reqs = [
     'requests >= 2.5.1'
 ]
@@ -13,8 +10,6 @@ setuptools.setup(
     author="Kyle Beauregard",
     author_email="kylembeauregard@gmail.com",
     description="A library to make many requests concurrently.",
-    long_description=long_description,
-    long_description_content_type="text/markdown",
     url='https://github.com/kbeauregard/ManyRequests',
     packages=setuptools.find_packages(
         include=[
