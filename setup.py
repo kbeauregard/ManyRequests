@@ -15,6 +15,7 @@ setuptools.setup(
     description="A library to make many requests concurrently.",
     long_description=long_description,
     long_description_content_type="text/markdown",
+    url='https://github.com/kbeauregard/ManyRequests',
     packages=setuptools.find_packages(
         include=[
             'ManyRequests*',
