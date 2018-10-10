@@ -1,6 +1,11 @@
 # ManyRequests
 Library for making many python requests concurrently.
 
+#### Installation
+```
+pip install ManyRequests
+```
+#### Example
 ```python
 from ManyRequests.WebRunner import WebRunner
 
