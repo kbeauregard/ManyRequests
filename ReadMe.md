@@ -2,7 +2,7 @@
 Library for making many python requests concurrently.
 
 #### Installation
-```
+```Shell
 pip install ManyRequests
 ```
 #### Example
