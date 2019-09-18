@@ -1,6 +1,6 @@
 import requests
-from Queue import Queue
 from threading import Thread
+from six.moves.queue import Queue
 
 
 def flatten_kwargs(index, **kwargs):
