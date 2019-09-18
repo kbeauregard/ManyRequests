@@ -6,7 +6,7 @@ reqs = [
 
 setuptools.setup(
     name="ManyRequests",
-    version="0.0.2",
+    version="0.0.4",
     author="Kyle Beauregard",
     author_email="kylembeauregard@gmail.com",
     description="A library to make many requests concurrently.",

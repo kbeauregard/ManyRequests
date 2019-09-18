@@ -21,19 +21,19 @@ class WebRunner:
 
     def request(self, index, url, **kwargs):
         kwargs = flatten_kwargs(index, **kwargs)
-        #print '%s\n%s\n' % (url, kwargs)
         try:
             self.resp_queue.put(
-                (index, requests.get(url, **kwargs)))
+                (index, requests.get(url, **kwargs))
+            )
         except Exception as e:
             self.resp_queue.put((index, None))
-            print 'Failed to download %s because %s.' % (url, e)
+            print('Failed to download %s because %s.' % (url, e))
 
 
     def runner(self, **kwargs):
         while True:
             index, url = self.work_queue.get()
-            if 'http://' not in url or 'https://' not in url:
+            if 'http://' not in url and 'https://' not in url:
                 url = 'http://' + url
             self.request(index, url, **kwargs)
             self.work_queue.task_done()
