@@ -22,8 +22,9 @@ class WebRunner:
     def request(self, index, url, **kwargs):
         kwargs = flatten_kwargs(index, **kwargs)
         try:
+            method = kwargs.pop('method', 'GET')
             self.resp_queue.put(
-                (index, requests.get(url, **kwargs))
+                (index, requests.request(method=method, url=url, **kwargs))
             )
         except Exception as e:
             self.resp_queue.put((index, None))
